@@ -1,4 +1,4 @@
 library(testthat)
-library(artyfarty)
+library(omnitheme)
 
-test_check("artyfarty")
+test_check("omnitheme")
