@@ -468,3 +468,40 @@ theme_empty<-function(){
       panel.grid.minor = element_blank()
     )
 }
+
+#' The OmniAnalytics Theme
+#' 
+#' @return theme
+#' @export
+theme_omni <- function(){
+    color.background = "#FFFFFF"
+    color.text = "#E07049"
+    color.grid = "#2C3E50"
+    color.axis.line = "#2C3E50"
+    
+    theme_bw(base_size=12, base_family = fonts_selector("Times New Roman", "Times", "serif")) +
+        theme(
+            
+            panel.background=element_rect(fill=color.background, color=NA),
+            plot.background=element_rect(fill=color.background, color=color.background),
+            panel.border=element_rect(color=color.background),
+            
+            panel.grid.major=element_line(color=color.grid,size=.1, linetype = 2),
+            panel.grid.minor=element_blank(),
+            axis.line.x=element_line(color=color.axis.line),
+            axis.line.y=element_line(color=color.axis.line),
+            axis.ticks=element_blank(),
+            
+            legend.background = element_rect(fill=color.background),
+            legend.key = element_rect(fill=NA, color=NA),
+            legend.text = element_text(size=rel(.8),color=color.text),
+            legend.title = element_text(color=color.text),
+            
+            plot.title=element_text(color=color.text, size=rel(1.2), face = "bold"),
+            axis.text.x=element_text(size=rel(.95),color="#2C3E50"),
+            axis.text.y=element_text(size=rel(.95),color="#2C3E50"),
+            axis.title.x=element_text(size=rel(1),color=color.text, vjust=0, face = "bold"),
+            axis.title.y=element_text(size=rel(1),color=color.text, vjust=1.25, face = "bold")
+        )
+    
+}
