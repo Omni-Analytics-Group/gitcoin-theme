@@ -1,12 +1,12 @@
-## OmniTheme
+# OmniTheme
 
 Forked from Bart6114/artyfarty, adding a new theme
 
-### Installation
+## Installation
 
-devtools::install_github("erichare/omnitheme")
+    devtools::install_github("erichare/omnitheme")
 
-### How-To
+## How-To
 
     library(ggplot2)
     library(omnitheme)
