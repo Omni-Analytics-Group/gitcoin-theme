@@ -5,7 +5,7 @@ PALETTES <- (function(filename){
     pals[[p_name]]$size <- length(pals[[p_name]]$colors)
   }
   pals
-})(system.file("extdata", "palettes.json", package = "artyfarty"))
+})(system.file("extdata", "palettes.json", package = "omnitheme"))
 
 
 #' Show details of specific palette
@@ -17,7 +17,7 @@ PALETTES <- (function(filename){
 #' palette_info('flatpaleta')
 palette_info <- function(palette_name){
   if(!palette_name %in% names(PALETTES))
-    stop(paste0("Requested palette '", palette_name, "' not found in artyfarty library"))
+    stop(paste0("Requested palette '", palette_name, "' not found in omnitheme library"))
 
   PALETTES[[palette_name]]
 }
@@ -26,7 +26,7 @@ palette_info <- function(palette_name){
 #'
 #' @export
 list_palettes <- function(){
-  cat("Available artyfarty palettes:\n")
+  cat("Available omnitheme palettes:\n")
   cat("----------------------------\n")
   for(p in names(PALETTES)){
     cat(p, "\n")

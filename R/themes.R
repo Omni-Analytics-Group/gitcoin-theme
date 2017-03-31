@@ -502,6 +502,7 @@ theme_omni <- function(){
             axis.text.y=element_text(size=rel(.95),color="#2C3E50"),
             axis.title.x=element_text(size=rel(1),color=color.text, vjust=0, face = "bold"),
             axis.title.y=element_text(size=rel(1),color=color.text, vjust=1.25, face = "bold")
-        )
+        ) +
+        watermark_img(system.file("images", "OAG_CLR_web_big.png", package = "omnitheme"), location = "tr", alpha = .5, width = 55)
     
 }
