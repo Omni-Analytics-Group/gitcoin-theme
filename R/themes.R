@@ -494,14 +494,14 @@ theme_omni <- function(){
             
             legend.background = element_rect(fill=color.background),
             legend.key = element_rect(fill=NA, color=NA),
-            legend.text = element_text(size=rel(.8),color=color.text),
-            legend.title = element_text(color=color.text),
+            legend.text = element_text(size=rel(.8),color=color.text,angle=0),
+            legend.title = element_text(color=color.text,angle=0),
             
-            plot.title=element_text(color=color.text, size=rel(1.2), face = "bold"),
-            axis.text.x=element_text(size=rel(.95),color="#2C3E50"),
-            axis.text.y=element_text(size=rel(.95),color="#2C3E50"),
-            axis.title.x=element_text(size=rel(1),color=color.text, vjust=0, face = "bold"),
-            axis.title.y=element_text(size=rel(1),color=color.text, vjust=1.25, face = "bold")
+            plot.title=element_text(color=color.text, size=rel(1.2), face = "bold",angle=0),
+            axis.text.x=element_text(size=rel(.95),color="#2C3E50",angle=0),
+            axis.text.y=element_text(size=rel(.95),color="#2C3E50",angle=0),
+            axis.title.x=element_text(size=rel(1),color=color.text, vjust=0, face = "bold",angle=0),
+            axis.title.y=element_text(size=rel(1),color=color.text, vjust=1.25, face = "bold",angle=0)
         )
     
 }
