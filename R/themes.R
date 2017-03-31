@@ -479,7 +479,6 @@ theme_omni <- function(){
     color.grid = "#2C3E50"
     color.axis.line = "#2C3E50"
     
-    watermark_img(system.file("images", "OAG_CLR_web_big.png", package = "omnitheme"), location = "tr", alpha = .5, width = 55) +
     theme_bw(base_size=12, base_family = fonts_selector("Times New Roman", "Times", "serif")) +
         theme(
             
