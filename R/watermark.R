@@ -18,7 +18,12 @@ watermark_img<-function(filename, x, y, width=32, location="br", alpha=1, ...){
     gpar <- modifyList(gpar, extra_gpar)
 
   img <- readbitmap::read.bitmap(filename)
-  img_alpha <- matrix(rgb(img[,,1],img[,,2],img[,,3], img[,,4] * alpha), nrow=dim(img)[1])
+  
+  if (dim(img)[3] == 3) {
+      img_alpha <- matrix(rgb(img[,,1],img[,,2],img[,,3]), nrow=dim(img)[1])
+  } else {
+      img_alpha <- matrix(rgb(img[,,1],img[,,2],img[,,3], img[,,4] * alpha), nrow=dim(img)[1])
+  }
 
   if(all(missing(x), missing(y))){
 
@@ -43,8 +48,6 @@ watermark_img<-function(filename, x, y, width=32, location="br", alpha=1, ...){
   wm_grob <- grid::rasterGrob(img_alpha, interpolate=TRUE, width=unit(width, "points"), y=y, x=x, gp=gpar)
 
   annotation_custom(wm_grob)
-
-
 }
 
 
