@@ -19,7 +19,9 @@ watermark_img<-function(filename, x, y, width=32, location="br", alpha=1, ...){
 
   img <- readbitmap::read.bitmap(filename)
   
-  if (dim(img)[3] == 3) {
+  if (dim(img)[3] == 2) {
+      img_alpha <- matrix(rgb(img[,,1],img[,,2],rep(0, length(img[,,2]))), nrow=dim(img)[1])
+  } else if (dim(img)[3] == 3) {
       img_alpha <- matrix(rgb(img[,,1],img[,,2],img[,,3]), nrow=dim(img)[1])
   } else {
       img_alpha <- matrix(rgb(img[,,1],img[,,2],img[,,3], img[,,4] * alpha), nrow=dim(img)[1])
